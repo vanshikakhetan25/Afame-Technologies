@@ -1,11 +1,4 @@
-Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> 
-=================== RESTART: C:\Users\hp\Desktop\ttitanic.py ===================
 
-=================== RESTART: C:\Users\hp\Desktop\ttitanic.py ===================
-
-=================== RESTART: C:\Users\hp\Desktop\ttitanic.py ===================
    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
 0            1         0       3  ...   7.2500   NaN         S
 1            2         1       1  ...  71.2833   C85         C
@@ -54,15 +47,6 @@ dtype: int64
 890    32.0
 Name: Age, Length: 891, dtype: float64
 
-Warning (from warnings module):
-  File "C:\Users\hp\Desktop\ttitanic.py", line 15
-    titanic_data['Age'].fillna(titanic_data['Age'].mean(), inplace=True)
-FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
-The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
-
-For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
-
-
 0      22.000000
 1      38.000000
 2      26.000000
@@ -76,13 +60,6 @@ For example, when doing 'df[col].method(value, inplace=True)', try using 'df.met
 890    32.000000
 Name: Age, Length: 891, dtype: float64
 
-Warning (from warnings module):
-  File "C:\Users\hp\Desktop\ttitanic.py", line 18
-    titanic_data['Embarked'].fillna(titanic_data['Embarked'].mode()[0], inplace=True)
-FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
-The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
-
-For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
 
 
 0      S
@@ -110,10 +87,6 @@ Fare           0
 Embarked       0
 dtype: int64
 
-Warning (from warnings module):
-  File "C:\Users\hp\Desktop\ttitanic.py", line 21
-    titanic_data.replace({'Sex':{'male':0,'female':1}, 'Embarked':{'S':0,'C':1,'Q':2}}, inplace=True)
-FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
      Pclass  Sex        Age  SibSp  Parch     Fare  Embarked
 0         3    0  22.000000      1      0   7.2500         0
 1         1    1  38.000000      1      0  71.2833         1
